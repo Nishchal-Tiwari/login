@@ -58,9 +58,9 @@ app.set('view engine','ejs')
 
 
 mongo.set("strictQuery", false);
-    mongo.connect("mongodb://127.0.0.1:27017/session" ).then(console.log("Sucessfully ! connected to database...")).catch(err => console.log(err))
+    mongo.connect("mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb.net/?retryWrites=true&w=majority/session" ).then(console.log("Sucessfully ! connected to database...")).catch(err => console.log(err))
 const sessionStore={
-    mongoUrl: "mongodb://127.0.0.1:27017/session",
+    mongoUrl: "mongodb+srv://messenger:Project%40123@cluster0.10fn5ry.mongodb.net/?retryWrites=true&w=majority/session",
     ttl: 14 * 24 * 60 * 60,
     autoRemove: 'native',  // option disabled
     // autoRemove: 'interval',  when you dont want to use ttl so use interval instead
